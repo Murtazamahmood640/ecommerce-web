@@ -1,0 +1,661 @@
+body{
+    width: 100%;
+    margin: 0;
+}
+.Container{
+    width: 100%;
+    margin: 0 0 80px 0;
+}
+
+/* Header.css */
+.navbar {
+    background-color: black; /* Set the background color */
+    color: #fff; /* Set the text color */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 20px 0;
+  }
+  .Navbar-left{
+    width: 20%;
+  }
+  .Navbar-center{
+    width: 60%;
+
+  }
+  .Navbar-right{
+    width: 20%;
+  }
+  
+  .logo {
+    font-size: 24px; /* Set the font size for the logo */
+  }
+  .Logoweb{
+    width: 160px;
+    margin: 10px 20px;
+  }
+  nav{
+    text-align: center;
+  }
+  .link {
+    color: #ffffff; /* Set the text color for the links */
+    text-decoration: none; /* Remove underlines from links */
+    font-size: 24px;
+    margin: 0 12px;
+    
+  }
+  
+  /* Style the links on hover */
+  .link:hover {
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+  }
+  
+/* HeroSection.css */
+.hero {
+  position: relative;
+  display: flex;
+  background-color: #000000; /* Background color for the hero section */
+  width: 100%;
+  height:600px
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 60%;
+  padding: 100px 30px 30px 60px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+
+  color: white;
+}
+
+.hero-content p {
+  font-size: 24px;
+ 
+  color: white;
+
+}
+
+.hero-content button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
+}
+
+.hero-content button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 40%;
+  padding: 0px 0 30px 30px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Heading{
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+}
+.Heading h1{
+  font-size: 40px;
+}
+.Heading p{
+  font-size: 20px;
+  margin: 50px 100px;
+}
+
+
+.product-popup-overlay {
+  display: none;
+  justify-content: flex-start; /* Adjust as needed */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 70%; /* Adjust as needed */
+  width: 30%; /* Adjust as needed */
+  height: 100vh; /* Full height of the viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 1000; /* Ensure the popup is above other content */
+  transition: left 0.3s ease; /* Smooth transition for left */
+  overflow: hidden; /* Hide content that overflows */
+}
+
+.product-popup-overlay.show {
+  display: flex; /* Show the overlay when the "show" class is applied */
+  left: 70%; /* Expanded left position */
+  background-color: rgb(0, 0, 0);
+  text-align: end;
+}
+
+
+.popup-content {
+  position: relative;
+  padding: 20px;
+  width: 100%; /* Full width of the overlay */
+  max-width: 400px; /* Limit the maximum width */
+  background-color: #fff;
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.2);
+  border-left: 1px solid #ccc;
+  background-color: #000000;
+  color: white;
+
+}
+
+.close-popup-button{
+  background-color: #0056b3;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+.close-popup-button:hover{
+    background-color: #0056b3;
+  
+}
+.img-div{
+  text-align: center;
+}
+.popup-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.quantity-section label {
+  font-size: 18px;
+  margin-right: 10px;
+  color: white;
+}
+
+.quantity-section input {
+  font-size: 18px;
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+}
+
+.popup-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-button {
+  background-color: #0056b3;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}
+
+/* Collection.css */
+
+.product-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.product-item {
+  width: calc(33.33% - 20px);
+  background-color: #000000;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  padding: 10px 0px 0px 0px;
+  text-align: center;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.view-details-button {
+  background-color: #0056b3;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.view-details-button:hover {
+  background-color: #0056b3;
+}
+/* Reset some default styles and add background color to the footer */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* Center the footer content */
+.footer-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.footer-logo{
+  width: 15%;
+}
+.footer-logo img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer-dec{
+  width: 40%;
+  font-size: 20px;
+}
+.footer-links  {
+  width: 15%;
+  font-size: 20px;
+  text-align: center;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 20px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff5733; /* Change the color on hover */
+}
+/* Style the footer links */
+.footer-social  {
+  width: 20%;
+  font-size: 20px;
+  text-align: center;
+}
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.footer-social li {
+  margin: 20px 0;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+
+}
+
+.footer-social a:hover {
+  color: #ff5733; /* Change the color on hover */
+}
+
+
+/* Style the footer copyright notice */
+.footer-bottom {
+  background-color: #222;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* 100% of viewport height */
+}
+
+
+
+.contact-map {
+  flex: 1; /* Take up 50% of the available width */
+}
+
+.contact-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  height: 500px;
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.bg-col{
+  background-color: #ffffff;
+  width: 100%;
+  height: 600px;
+  padding: 50px 0;
+  justify-content: center;
+}
+
+.login-cont {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* White background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for form */
+  height: 520px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-tabs {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.login-tab {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  border: none;
+  cursor: pointer;
+}
+
+.login-tab.active {
+  background-color: #000; /* Black background for active tab */
+  color: #fff; /* White text for active tab */
+}
+
+.blue-button {
+  background-color: #007bff; /* Blue button */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.blue-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Additional styling for form elements (customize as needed) */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px;
+}
+
+/* Cart Container */
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cart Heading */
+.cart-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Cart Items List */
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  height: 500px; /* Set a fixed height for each card */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 100%;
+}
+
+.cart-item-image {
+  width: 20%;
+  height: 300px; /* Adjust the image height */
+  object-fit: cover;
+}
+
+.cart-item-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cart-item h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cart-item p {
+  font-size: 16px;
+  margin: 0;
+  color: #777;
+  flex-grow: 1;
+}
+
+/* Remove Button */
+.remove-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-end; /* Position the button at the bottom */
+  margin-top: auto; /* Push the button to the bottom */
+}
+
+.remove-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Cart Total */
+.cart-total {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-total p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Continue Shopping Link */
+.cart-container a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cart-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* Checkout.css */
+
+/* Styles for the checkout container */
+.checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles for checkout items */
+.checkout-item {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.checkout-item-details {
+  display: flex;
+}
+
+.checkout-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.checkout-item-info {
+  flex-grow: 1;
+}
+
+/* Styles for checkout total */
+.checkout-total {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Styles for checkout form and input fields */
+.checkout-form {
+  margin-top: 20px;
+}
+
+.checkout-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-button:hover {
+  background-color: #0056b3;
+}
